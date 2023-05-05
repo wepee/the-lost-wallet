@@ -1,27 +1,26 @@
 const fs = require("fs");
-const path = require("path");
 
 const metadataPath = "./metadata";
 
 
 const metadataZero = `{
-   "description": "Death, oh death, /tin/ where do you lead? To the abyss of eternal sleep, /yurl.c/ indeed. Your cloak, /om/lev/ a veil of mystery and dread, A portal to a world beyond our mortal thread. /iath0r/",
-   "external_url": "https://www.thelostwallet.com/",
-   "image": "ipfs://QmQyRskX6BL6H7bW4hG3yHnD3sGo56JRfH5AoybuGMtBhW",
-   "name": "The Lost Wallet - NFT 00",
-   "attributes": [
-     {
-       "trait_type": "NFT #",
-       "value": 0
-     }
-   ]
- }`
+  "description": "Death, oh death, /tin/ where do you lead? To the abyss of eternal sleep, /yurl.c/ indeed. Your cloak, /om/lev/ a veil of mystery and dread, A portal to a world beyond our mortal thread. /iath0r/",
+  "external_url": "https://www.thelostwallet.com/",
+  "image": "ipfs://QmQyRskX6BL6H7bW4hG3yHnD3sGo56JRfH5AoybuGMtBhW",
+  "name": "The Lost Wallet - NFT 00",
+  "attributes": [
+    {
+      "trait_type": "NFT #",
+      "value": 0
+    }
+  ]
+}
+`
 
 
 const metadataEarly = (id, ipfsLink) => {
-    return `
- {
-  "description": "The Lost Wallet - Early NFT ${getWeekNumber(id)}}",
+    return `{
+  "description": "The Lost Wallet - Early NFT ${getWeekNumber(id)}",
   "external_url": "https://www.thelostwallet.com/",
   "image": "${ipfsLink}",
   "name": "The Lost Wallet - Early NFT ${getWeekNumber(id)}",
@@ -31,7 +30,7 @@ const metadataEarly = (id, ipfsLink) => {
       "value": ${id}
     }
   ]
-}`
+}`;
 }
 
 const metadataRegular = (id, ipfsLink) => {
@@ -46,7 +45,7 @@ const metadataRegular = (id, ipfsLink) => {
       "value": ${id}
     }
   ]
-}`
+}`;
 }
 
 const getWeekNumber = (id) => {
@@ -55,15 +54,15 @@ const getWeekNumber = (id) => {
 }
 
 const getMetadata = (id, ipfs) => {
-    if (id === 0) {
-        return JSON.parse(metadataZero);
+    if (id === "0") {
+        return metadataZero;
     }
 
     if (id % 2 !== 0) {
-        return JSON.parse(metadataEarly(id, ipfs));
+        return metadataEarly(id, ipfs);
     }
 
-    return JSON.parse(metadataRegular(id, ipfs));
+    return metadataRegular(id, ipfs);
 }
 
 
@@ -95,4 +94,3 @@ const fillMetadata = () => {
 };
 
 fillMetadata();
-
