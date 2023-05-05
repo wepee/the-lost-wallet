@@ -1,0 +1,12 @@
+{
+  "description": "The Lost Wallet - NFT 02",
+  "external_url": "https://www.thelostwallet.com/",
+  "image": "ipfs://QmQf5VFd8ucKKMsKjh6XxFN6MQMTAbfjzFUxrK2dytnpXe",
+  "name": "The Lost Wallet - NFT 02",
+  "attributes": [
+    {
+      "trait_type": "NFT #",
+      "value": 4
+    }
+  ]
+}
