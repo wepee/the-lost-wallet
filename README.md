@@ -5,10 +5,10 @@ Deployment process
 Follow these steps to update the weekly assets, metadata, and smart contract for The Lost Wallet project:
 
 ### 1. Upload weekly assets
-For week n, upload files corresponding to n*2-1 and n*2 on Pinata.
+For week `n`, upload files corresponding to `n*2-1` and `n*2` on Pinata.
 
 ### 2. Update metadata 
-In the /metadata directory, update the (n*2-1).json and (n*2).json files with the two new CIDs.
+In the /metadata directory, update the `(n*2-1).json` and `(n*2).json` files with the two new CIDs.
 
 ### 3. Generate new weekly metadata
 Run the following command to generate the new weekly metadata files:
