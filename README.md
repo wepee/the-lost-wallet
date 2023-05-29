@@ -35,3 +35,36 @@ https://etherscan.io/address/0x0E84aBd06A5Ce90313457F`3225D6EAa2d6E999F9?method=
     const LAST_ACTIVATED_WEEK_ID = n;
 ```
 
+
+## Sunday 18h
+
+### 1. Add new NFT in CMS
+https://webflow.com/design/the-lost-wallet-website
+In CMS go to quests, then select "Quest `n`" and fill following data
+- Description = given description
+- NFT Num = NFT `n`
+  - should be preceded by 0 if `n` < 10
+- Video = given youtube link
+- Display = true
+
+### 2. Add NFT asset video
+Now you should go to `Quests` page to add NFT asset
+
+Duplicate a "popup-image" in this folder
+![img-path.png](img-path.png)
+
+and replace video with "/assets/`2*n`.mp4"
+
+In element settings, change the condition for "QUEST#`n`"
+![img.png](img.png)
+
+
+### 3. Change LAST_ACTIVATED_WEEK_ID
+
+in site settings, custom code and look for
+`const LAST_ACTIVATED_WEEK_ID = `n-1`;`
+
+and change value to `n`
+
+
+
