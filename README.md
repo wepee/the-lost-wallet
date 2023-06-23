@@ -27,6 +27,9 @@ https://etherscan.io/address/0x0E84aBd06A5Ce90313457F3225D6EAa2d6E999F9?method=A
 Run the setURI function with the folder CID:
 https://etherscan.io/address/0x0E84aBd06A5Ce90313457F`3225D6EAa2d6E999F9?method=Activate__Week~0xc87d4a28#writeContract#F10
 
+ipfs://`ipfs_hash_of_metadata_folder`/{id}.json
+
+
 ### 6. Update the Front-end
 
 1. Go to the Webflow code editor: https://webflow.com/dashboard/sites/the-lost-wallet-website/code
