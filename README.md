@@ -14,7 +14,7 @@ In the /metadata directory, update the `(n*2-1).json` and `(n*2).json` files wit
 Run the following command to generate the new weekly metadata files:
 
 ``` bash
-node split-in-weeks.sh
+/bin/bash ./split-in-weeks.sh
 ```
 
 ### 4. Upload corresponding folder to IPFS
